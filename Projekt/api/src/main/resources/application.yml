@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  sql:
+    init:
+      mode: always
+  application:
+    name: SWIFT
+  datasource:
+    url: jdbc:postgresql://localhost:5432/swift_code
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: haslo1
+
+  jpa:
+    properties:
+      show_sql: true
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: none

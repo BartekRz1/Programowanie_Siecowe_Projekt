@@ -1,0 +1,36 @@
+body{
+    background-color: darkslategrey;
+}
+main{
+    height: 800px;
+    width: 800px;
+    margin: 25px auto;
+    background-color: #10403B;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+nav a {
+    font-size:32px;
+    margin: 35px auto;
+    border-radius: 50px;
+    border: 1px #4C5958 solid;
+    text-decoration: none;
+    color:whitesmoke;
+    padding: 20px;
+}
+nav a:hover{
+    background-color: whitesmoke;
+    color:#10403B;
+    text-decoration: none;
+    transition: 1s;
+}

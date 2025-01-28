@@ -1,0 +1,43 @@
+body{
+    background-color: darkslategrey;
+}
+main{
+    height: 800px;
+    width: 800px;
+    margin: 25px auto;
+    background-color: #10403B;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color:whitesmoke;
+}
+form{
+    color: whitesmoke;
+}
+label{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 0 5px;
+    height: 0;
+    width: 225px;
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 225px;
+}
+.button{
+    width: 250px;
+    padding : 10px;
+    margin: 5px 5px;
+    border-radius: 10px;
+}

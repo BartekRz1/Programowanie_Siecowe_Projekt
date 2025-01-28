@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bank</title>
+    <link rel="stylesheet" th:href="@{/addBank.css}">
+</head>
+<body>
+
+<main>
+    <h1>Enter Bank Details</h1><br>
+    <form action="#" th:action="@{/updateBank}" th:object="${bankDTO}" method="get">
+        <!-- Hidden field to simulate PUT method -->
+        <input type="hidden" name="_method" value="PUT" />
+        <div th:if="${message}">
+            <h3 style="text-align: center;" th:text="${message}"></h3>
+        </div>
+        <div>
+            <label for="countryISO2">Country ISO2:</label><br>
+            <input type="text" id="countryISO2" th:field="*{countryISO2}" placeholder="Enter Country ISO2" required>
+        </div>
+
+        <div>
+            <label for="swiftCode">Swift Code:</label><br>
+            <input type="text" id="swiftCode" th:field="*{swiftCode}" placeholder="Enter Swift Code" required>
+        </div>
+
+        <div>
+            <label for="codeType">Code Type:</label><br>
+            <input type="text" id="codeType" th:field="*{codeType}" placeholder="Enter Code Type" required>
+        </div>
+
+        <div>
+            <label for="bankName">Bank Name:</label><br>
+            <input type="text" id="bankName" th:field="*{bankName}" placeholder="Enter Bank Name" required>
+        </div>
+
+        <div>
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" th:field="*{address}" placeholder="Enter Address" required>
+        </div>
+
+        <div>
+            <label for="townName">Town Name:</label><br>
+            <input type="text" id="townName" th:field="*{townName}" placeholder="Enter Town Name" required>
+        </div>
+
+        <div>
+            <label for="timeZone">Time Zone:</label><br>
+            <input type="text" id="timeZone" th:field="*{timeZone}" placeholder="Enter Time Zone" required>
+        </div>
+
+        <div>
+            <label for="countryName">Country Name:</label><br>
+            <input type="text" id="countryName" th:field="*{countryName}" placeholder="Enter Country Name" required>
+        </div>
+
+        <div>
+            <button class="button" type="submit">Submit</button>
+        </div>
+    </form>
+</main>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Banks</title>
+    <link rel="stylesheet" th:href="@{/showBanks.css}">
+</head>
+<body>
+    <main>
+        <br>
+        <form th:action="@{/showBanks/swift-code}" method="get">
+            <label for="swiftCode">Swift Code</label><br>
+            <input placeholder="Enter Swift Code" type="text" name="swiftCode" id="swiftCode" required><br>
+            <input type="submit" value="Get by swift code" class="button">
+        </form>
+        <form th:action="@{/showBanks/all}" method="get">
+            <input type="submit" value="Show all" class="button">
+        </form>
+        <div class="bank" th:if="${bank != null}">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Swift Code</th>
+                    <th>Address</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td th:text="${bank.bankName}"></td>
+                    <td th:text="${bank.swiftCode}"></td>
+                    <td th:text="${bank.address}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

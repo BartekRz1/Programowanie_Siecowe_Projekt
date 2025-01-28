@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Banks</title>
+    <link rel="stylesheet" th:href="@{/allBanks.css}"></link>
+</head>
+<body>
+<h1>All Banks</h1>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>Country Code</th>
+            <th>Name</th>
+            <th>Swift Code</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="bank : ${banks}">
+            <td th:text="${bank.countryISO2}"></td>
+            <td th:text="${bank.bankName}"></td>
+            <td th:text="${bank.swiftCode}"></td>
+            <td th:text="${bank.address}"></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

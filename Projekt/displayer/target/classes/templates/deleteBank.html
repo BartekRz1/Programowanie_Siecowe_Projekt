@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Bank</title>
+    <link rel="stylesheet" th:href="@{/addBank.css}">
+</head>
+<body>
+
+<main>
+    <h1>Delete Bank by Swift Code</h1><br>
+    <form action="#" th:action="@{/deleteBank}" method="post">
+
+
+        <div th:if="${message}">
+            <h3 style="text-align: center;" th:text="${message}"></h3>
+        </div>
+
+        <div>
+            <label for="swiftCode">Swift Code:</label><br>
+            <input type="text" id="swiftCode" name="swiftCode" placeholder="Enter Swift Code to Delete" required>
+        </div>
+
+        <div>
+            <button class="button" type="submit">Delete Bank</button>
+        </div>
+    </form>
+</main>
+
+</body>
+</html>

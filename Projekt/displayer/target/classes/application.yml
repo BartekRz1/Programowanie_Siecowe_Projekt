@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: displayer
+server:
+  port: 8081
